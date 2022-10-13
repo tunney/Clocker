@@ -1,6 +1,7 @@
 # Clocker
 
 A utility that can be used to programmatically perform a clocking operation in MYTIME
+
 Requires Java, assumes MacOS
 
 Outstanding:
@@ -8,8 +9,10 @@ Outstanding:
 * Addition of Calendar integration for public holidays and holidays
 
 Usage:
+```
 Edit clock.sh to include the location of the compiled clocker class, your username, and password
 chmod 777 clock.sh
+```
 
 At a terminal "crontab -e"
 
