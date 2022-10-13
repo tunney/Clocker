@@ -9,24 +9,27 @@ import java.util.Random;
 
 public class Clocker {
     public static String urlParametersBody = "&tzOffset=0&tzName=Europe%2FLondon&gpsLong=&gpsLat=&gpsAccuracy=&clocktype=&comment=";
-    public static String loginURL = ;
-
     private final String username;
     private final String password;
+    private final String rootURL;
 
-    public Clocker(String username, String password ) {
+    public Clocker(String rootURL, String username, String password ) {
+        this.rootURL = rootURL;
         this.username = username;
         this.password = password;
     }
 
     public static void main(String[] args) {
        if(args.length != 2) {
-           System.out.println("Usage: Clocker <username> <password>");
+           System.out.println("Usage: Clocker <rootURL> <username> <password>");
            System.exit(1);
        }
-        Clocker main = new Clocker(args[0], args[1]);
+        Clocker main = new Clocker(args[0], args[1], args[2]);
         main.clockIn();
     }
+     public String buildURL(String root){
+        return "https://" + root + "/Clocking/RecordClocking.json";
+     }
 
     public void clockIn() {
 //        com.company.RandomTimer randomTimer = new com.company.RandomTimer();
@@ -37,7 +40,7 @@ public class Clocker {
             byte[] postData = urlParameters.getBytes(StandardCharsets.UTF_8);
             int postDataLength = postData.length;
 
-            URL url = new URL(loginURL);
+            URL url = new URL(buildURL(rootURL));
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 

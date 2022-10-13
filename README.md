@@ -4,13 +4,17 @@ A utility that can be used to programmatically perform a clocking operation in M
 
 Requires Java, assumes MacOS
 
+The rootURL property is the subdomain and domain from the URL that you use to clock in. For example in the below it is "mytime.company.com"
+
+https://mytime.company.com/Clocking/index.htm
+
 Outstanding:
 * Query inclusion of randomisation around clocking in and out, there but left out, needs testing with crontab
 * Addition of Calendar integration for public holidays and holidays
 
 Usage:
 ```
-Edit clock.sh to include the location of the compiled clocker class, your username, and password
+Edit clock.sh to include the location of the compiled clocker class, the root url of your clocking, your username, and password
 chmod 777 clock.sh
 ```
 
