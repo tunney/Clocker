@@ -14,6 +14,7 @@ chmod 777 clock.sh
 At a terminal "crontab -e"
 
 Example crontab:
-
+```
 00 09 * * 1-5 /Users/username/dev/clock.sh >/tmp/stdout.log 2>/tmp/stderr.log
 30 17 * * 1-5 /Users/username/dev/clock.sh >/tmp/stdout.log 2>/tmp/stderr.log
+```
