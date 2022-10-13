@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class Clocker {
     public static String urlParametersBody = "&tzOffset=0&tzName=Europe%2FLondon&gpsLong=&gpsLat=&gpsAccuracy=&clocktype=&comment=";
-    public static String loginURL = "https://mytime.eu.ad.hertz.com/Clocking/RecordClocking.json";
+    public static String loginURL = ;
 
     private final String username;
     private final String password;
