@@ -13,12 +13,10 @@ Outstanding:
 * Addition of Calendar integration for public holidays and holidays
 
 Usage:
-```
-Edit clock.sh to include the location of the compiled clocker class, the root url of your clocking, your username, and password
-chmod 777 clock.sh
-```
-
-At a terminal "crontab -e"
+* Edit clock.sh to include the location of the compiled clocker class, the root url of your clocking, your username, and password
+* chmod 777 clock.sh
+* At a terminal "crontab -e"
+* Add crontab entries to reflect when you want a "clocking" to occur
 
 Example crontab:
 ```
