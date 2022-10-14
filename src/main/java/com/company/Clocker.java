@@ -20,7 +20,7 @@ public class Clocker {
     }
 
     public static void main(String[] args) {
-       if(args.length != 2) {
+       if(args.length != 3) {
            System.out.println("Usage: Clocker <rootURL> <username> <password>");
            System.exit(1);
        }
